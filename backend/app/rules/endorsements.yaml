@@ -1,0 +1,47 @@
+additional_insured:
+  form_patterns:
+    - form_number: "CG 20 10"
+      regex: "\\bCG\\s*20\\s*10\\b"
+      meaning:
+        - "ongoing ops"
+    - form_number: "CG 20 37"
+      regex: "\\bCG\\s*20\\s*37\\b"
+      meaning:
+        - "completed ops"
+    - form_number: "CG 20 26"
+      regex: "\\bCG\\s*20\\s*26\\b"
+      meaning:
+        - "scheduled person organization"
+    - form_number: "CG 20 33"
+      regex: "\\bCG\\s*20\\s*33\\b"
+      meaning:
+        - "automatic status"
+    - form_number: "CG 20 38"
+      regex: "\\bCG\\s*20\\s*38\\b"
+      meaning:
+        - "automatic status"
+        - "completed ops"
+  phrase_patterns:
+    blanket ai: "\\bblanket additional insured\\b"
+    ongoing ops: "\\bongoing operations?\\b"
+    completed ops: "\\bcompleted operations?\\b"
+    primary noncontributory: "\\bprimary(?:\\s+and\\s+noncontributory|\\s+noncontributory)?\\b"
+
+waiver_of_subrogation:
+  form_patterns:
+    - form_number: "CG 24 04"
+      regex: "\\bCG\\s*24\\s*04\\b"
+      meaning:
+        - "waiver form"
+  phrase_patterns:
+    blanket waiver: "\\bblanket waiver\\b"
+    waiver wording: "\\bwaiver of subrogation\\b"
+
+primary_noncontributory:
+  form_patterns:
+    - form_number: "CG 20 01"
+      regex: "\\bCG\\s*20\\s*01\\b"
+      meaning:
+        - "primary noncontributory"
+  phrase_patterns:
+    primary noncontributory: "\\bprimary(?:\\s+and\\s+noncontributory|\\s+noncontributory)?\\b"

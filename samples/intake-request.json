@@ -1,0 +1,11 @@
+{
+  "account_role": "reviewer",
+  "documents": [
+    {
+      "document_id": "contract-001",
+      "document_type": "contract",
+      "file_name": "sample-contract.txt",
+      "content": "Commercial General Liability insurance with limits of $1,000,000 each occurrence and $2,000,000 aggregate. Owner and contractor shall be additional insureds."
+    }
+  ]
+}

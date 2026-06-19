@@ -1,0 +1,17 @@
+__pycache__/
+.venv/
+venv/
+node_modules/
+.next/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.env
+.env.local
+.DS_Store
+Thumbs.db
+dist/
+build/
+*.pyc
+*.pyo
+*.log

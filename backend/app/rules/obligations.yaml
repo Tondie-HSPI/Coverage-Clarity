@@ -1,0 +1,184 @@
+obligations:
+  - key: general_liability
+    obligation_type: "General Liability"
+    patterns:
+      - "\\bcommercial\\s+general\\s+liabilit\\w*\\b"
+      - "\\bgeneral\\s+liabilit\\w*\\b"
+      - "\\bCGL\\b"
+    search_terms:
+      - "general liability"
+      - "commercial general liability"
+      - "occurrence"
+      - "aggregate"
+
+  - key: additional_insured
+    obligation_type: "Additional Insured"
+    patterns:
+      - "\\badditional\\s+insured\\b"
+      - "\\badditional\\s+insureds\\b"
+    search_terms:
+      - "additional insured"
+      - "endorsement"
+
+  - key: waiver_of_subrogation
+    obligation_type: "Waiver of Subrogation"
+    patterns:
+      - "\\bwaiver\\s+of\\s+subrogation\\b"
+      - "\\bsubrogation\\s+waiv\\w*\\b"
+    search_terms:
+      - "waiver of subrogation"
+      - "subrogation"
+
+  - key: umbrella_excess
+    obligation_type: "Umbrella / Excess"
+    patterns:
+      - "\\bumbrella\\b"
+      - "\\bexcess\\s+liabilit\\w*\\b"
+    search_terms:
+      - "umbrella"
+      - "excess"
+
+  - key: automobile_liability
+    obligation_type: "Automobile Liability"
+    patterns:
+      - "\\bautomobile\\s+liabilit\\w*\\b"
+      - "\\bauto\\s+liabilit\\w*\\b"
+      - "\\bcombined\\s+single\\s+limit\\b"
+    search_terms:
+      - "automobile liability"
+      - "combined single limit"
+
+  - key: workers_compensation
+    obligation_type: "Workers Compensation"
+    patterns:
+      - "\\bworkers?\\s+comp(?:ensation)?\\b"
+      - "\\bWC\\s+STATU\\w*\\b"
+    search_terms:
+      - "workers compensation"
+      - "statutory limits"
+
+  - key: employers_liability
+    obligation_type: "Employers Liability"
+    patterns:
+      - "\\bemployers?\\s+liabilit\\w*\\b"
+      - "\\bE\\.L\\.\\b"
+    search_terms:
+      - "employers liability"
+      - "each accident"
+
+  - key: directors_and_officers
+    obligation_type: "Directors and Officers Liability"
+    patterns:
+      - "\\bdirectors?\\s+(?:and|&)\\s+officers?\\s+liabilit\\w*\\b"
+      - "\\bD\\s*&\\s*O\\b"
+      - "\\bD&O\\b"
+    search_terms:
+      - "directors and officers"
+      - "D&O"
+      - "limit"
+
+  - key: employment_practices_liability
+    obligation_type: "Employment Practices Liability"
+    patterns:
+      - "\\bemployment\\s+practices\\s+liabilit\\w*\\b"
+      - "\\bEPLI\\b"
+      - "\\bemployment\\s+related\\s+claims\\b"
+      - "\\bwrongful\\s+(?:termination|employment)\\b"
+    search_terms:
+      - "employment practices liability"
+      - "EPLI"
+      - "wrongful termination"
+      - "limit"
+
+  - key: fiduciary_liability
+    obligation_type: "Fiduciary Liability"
+    patterns:
+      - "\\bfiduciary\\s+liabilit\\w*\\b"
+      - "\\bERISA\\b"
+      - "\\bemployee\\s+benefit\\s+plan\\b"
+      - "\\bbenefits?\\s+plan\\s+fiduciary\\b"
+    search_terms:
+      - "fiduciary liability"
+      - "ERISA"
+      - "employee benefit plan"
+      - "limit"
+
+  - key: crime_fidelity
+    obligation_type: "Crime / Fidelity"
+    patterns:
+      - "\\bcrime\\s+(?:coverage|insurance|policy)\\b"
+      - "\\bcommercial\\s+crime\\b"
+      - "\\bfidelity\\s+(?:bond|coverage|insurance)\\b"
+      - "\\bemployee\\s+dishonesty\\b"
+      - "\\btheft\\s+of\\s+(?:money|securities)\\b"
+    search_terms:
+      - "commercial crime"
+      - "fidelity bond"
+      - "employee dishonesty"
+      - "limit"
+
+  - key: cyber_liability
+    obligation_type: "Cyber Liability"
+    patterns:
+      - "\\bcyber\\s+liabilit\\w*\\b"
+      - "\\bcyber\\s+(?:risk|insurance|coverage|policy)\\b"
+      - "\\bprivacy\\s+liabilit\\w*\\b"
+      - "\\bnetwork\\s+security\\b"
+      - "\\bdata\\s+breach\\b"
+      - "\\btechnology\\s+(?:errors?\\s+(?:and|&)\\s+omissions|E&O)\\b"
+      - "\\btech\\s+E&O\\b"
+      - "\\bsecurity\\s+breach\\s+response\\b"
+      - "\\bPCI\\b|\\bpayment\\s+card\\b"
+      - "\\bmedia\\s+liabilit\\w*\\b"
+      - "\\bcyber\\s+(?:extortion|ransomware)\\b"
+      - "\\bdependent\\s+business\\s+interruption\\b"
+      - "\\bcomputer\\s+fraud\\b"
+      - "\\bsocial\\s+engineering\\b"
+    search_terms:
+      - "cyber liability"
+      - "technology errors and omissions"
+      - "privacy liability"
+      - "network security"
+      - "breach response"
+      - "data breach"
+      - "PCI"
+      - "media liability"
+      - "cyber extortion"
+      - "business interruption"
+      - "limit"
+
+  - key: certificate_holder
+    obligation_type: "Certificate Holder"
+    patterns:
+      - "\\bcertificate\\s+holder\\b"
+    search_terms:
+      - "certificate holder"
+
+  - key: additional_coverage_notes
+    obligation_type: "Additional Coverage Notes"
+    patterns:
+      - "\\bliquor\\s+liabilit\\w*\\b"
+      - "\\bpollution\\s+liabilit\\w*\\b"
+      - "\\baviation\\b|\\bUAV\\b"
+      - "\\bmarine\\s+liabilit\\w*\\b"
+      - "\\bprofessional\\s+liabilit\\w*\\b"
+      - "\\btransportation\\s+svc\\b"
+      - "\\bdemolition\\b|\\broofing\\b|\\belectrical\\b"
+    search_terms:
+      - "description of operations"
+      - "additional coverage"
+
+parties:
+  landlord: "\\blandlord\\b|\\blessor\\b"
+  owner: "\\bowner\\b"
+  contractor: "\\bcontractor\\b"
+  tenant: "\\btenant\\b"
+  certificate holder: "\\bcertificate holder\\b"
+  manager: "\\bmanager\\b"
+
+unclear_hints:
+  - "\\bwhen\\s+required\\s+by\\s+written\\s+contract\\b"
+  - "\\bnot\\s+attached\\b"
+  - "\\bupon\\s+request\\b"
+  - "\\bif\\s+required\\b"
+  - "\\bsubject\\s+to\\b"
