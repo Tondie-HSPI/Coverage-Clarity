@@ -1,14 +1,14 @@
-# Coverage Clarity API
+﻿# Coverage Clarity
 
-Coverage Clarity is a standalone backend for COI review.
+Coverage Clarity is an insurance document review tool for contracts, Certificates of Insurance (COIs), policies, and endorsement evidence.
 
-It compares contract insurance requirements against certificates of insurance,
-policies, and endorsement evidence. It returns supported, unmet, and missing
-items, plus a human-review email draft for the insured's broker, insurance
-agent, or carrier representative.
+It turns insurance requirements into structured review items, compares those requirements against uploaded evidence, and drafts a human-review email request for the insured's broker, insurance agent, or carrier representative.
 
-The production frontend can be built in Lovable and connected through the API
-contract in `docs/LOVABLE_FRONTEND_API.md`.
+## Product Shape
+
+- Frontend: Lovable or the existing Next.js app shell in this repo
+- Backend: FastAPI COI review API in `backend/app`
+- Deployment target: AWS through LeapStacks2 or another container-friendly path
 
 ## Core Workflow
 
@@ -21,15 +21,12 @@ contract in `docs/LOVABLE_FRONTEND_API.md`.
 - Additional Insured parties and endorsement signals
 - Waiver of Subrogation parties and endorsement signals
 - Certificate Holder and additional coverage notes
-- Management liability lines, including D&O, EPLI, Fiduciary, Crime/Fidelity,
-  and Cyber Liability
-- Cyber / Tech E&O component checks, including privacy, network security, breach
-  response, PCI/payment card, media liability, ransomware/extortion, dependent
-  business interruption, computer fraud, social engineering, and regulatory
-  defense signals
-- Contract requirements versus COI/policy evidence
+- Management liability lines, including D&O, EPLI, Fiduciary, Crime/Fidelity, and Cyber Liability
+- Cyber / Tech E&O component checks, including privacy, network security, breach response, PCI/payment card, media liability, ransomware/extortion, dependent business interruption, computer fraud, social engineering, and regulatory defense signals
 
-## Run Locally
+## Backend API
+
+Run locally:
 
 ```powershell
 .\start-backend.ps1
@@ -47,12 +44,19 @@ Health check:
 GET /health
 ```
 
-## API
+Endpoints:
 
 - `POST /api/coi-review` accepts pasted/structured text documents.
 - `POST /api/coi-review-upload` accepts PDF, text, and Markdown uploads.
-- Legacy aliases are also available: `POST /api/analyze` and
-  `POST /api/analyze-upload`.
+- Legacy aliases are also available: `POST /api/analyze` and `POST /api/analyze-upload`.
+
+## Frontend
+
+The existing Next.js app can remain as a project shell, but the production frontend may be built in Lovable. Use the API contract in:
+
+```text
+docs/LOVABLE_FRONTEND_API.md
+```
 
 ## Deployment
 
@@ -63,6 +67,4 @@ GET /health
 
 ## Boundary
 
-Coverage Clarity is decision support only. It does not certify compliance,
-confirm coverage, bind insurance, or provide legal or insurance advice. All
-outputs require human review.
+Coverage Clarity is decision support only. It does not certify compliance, confirm coverage, bind insurance, or provide legal or insurance advice. All outputs require human review.
