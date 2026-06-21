@@ -4,6 +4,15 @@ Coverage Clarity is an insurance document review tool for contracts, Certificate
 
 It turns insurance requirements into structured review items, compares those requirements against uploaded evidence, and drafts a human-review email request for the insured's broker, insurance agent, or carrier representative.
 
+## Background
+
+This started as a vision from my Applied AI & Business Analytics program: insurance and
+compliance teams spend too much time manually decoding contracts, COIs, and policies to
+figure out what's actually required and what's missing. I spent months exploring the
+problem, taking notes at conferences, and learning the tools, before building Compliance
+Explained as a first working prototype. Coverage Clarity is where that thinking landed:
+a more complete extraction, comparison, and decision-support workflow built end to end.
+
 ## Product Shape
 
 - Frontend: Lovable or the existing Next.js app shell in this repo
